@@ -1,0 +1,12 @@
+---- start houses/showHouses.html
+{{extend 'layout.html'}}
+<h1> Showing houses for person #{{=request.vars.id}}</h1>
+ 
+<div id="houseListing"></div>
+<div id="input"><input type="text" name="address"/><input type="hidden" name="owner" value="{{=request.vars.id}}" />
+<button onclick="ajax('saveAddress', ['address', 'owner'], 'houseListing')"> Web2PY save </button>
+</div>
+<script>
+ajax('saveAddress',['owner'],'houseListing');
+</script>
+---- end houses/showHouses.html

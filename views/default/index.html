@@ -1,0 +1,23 @@
+{{before_end=True}}
+{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}}
+{{extend 'layout.html'}}
+
+
+
+{{block before_end}}
+{{super}}
+
+{{end}}
+<div class="row">
+		<div class="span12">
+		<audio controls src="{{=URL('static','audi/rabbana.wav')}}"></audio>
+    </div>
+</div>
+<div class="row">
+    <div class="span10">
+        <textarea class="span10" rows="2" style="font-size:3em;line-height:1.5em;"></textarea>
+    </div>
+    <div class="span2">
+<button class="btn btn-large btn-info" type="button">Submit</button>
+    </div>
+</div>
